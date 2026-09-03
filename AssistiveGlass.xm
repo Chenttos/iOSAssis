@@ -174,6 +174,13 @@ static UIView *AGFindAssistiveTouch(void) {
     return nil;
 }
 
+#pragma mark - Gesture target
+
+@interface AGGestureTarget : NSObject
++ (instancetype)shared;
+- (void)handleGesture:(UILongPressGestureRecognizer *)gesture;
+@end
+
 #pragma mark - Press animation
 
 static void AGAnimate(UIView *button, BOOL pressed) {
@@ -274,7 +281,7 @@ static void AGInstallOnButton(UIView *button) {
     static dispatch_once_t onceToken;
 
     dispatch_once(&onceToken, ^{
-        target = [AGGestureTarget new];
+        target = [[AGGestureTarget alloc] init];
     });
 
     return target;
