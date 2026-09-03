@@ -265,12 +265,7 @@ static void AGInstallOnButton(UIView *button) {
                              OBJC_ASSOCIATION_ASSIGN);
 }
 
-#pragma mark - Gesture target
-
-@interface AGGestureTarget : NSObject
-+ (instancetype)shared;
-- (void)handleGesture:(UILongPressGestureRecognizer *)gesture;
-@end
+#pragma mark - Gesture target implementation
 
 @implementation AGGestureTarget
 
