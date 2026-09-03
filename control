@@ -1,0 +1,9 @@
+Package: com.assistiveglass.tweak
+Name: AssistiveGlass
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Liquid Glass press animation for the AssistiveTouch button on iOS 16.7.x.
+Maintainer: AssistiveGlass
+Author: AssistiveGlass
+Section: Tweaks
+Depends: firmware (>= 16.0)
