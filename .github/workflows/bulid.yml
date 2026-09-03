@@ -1,4 +1,4 @@
-name: Build SearchGlass
+name: Build 26Touch
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build SearchGlass
+    name: Build 26Touch
     runs-on: ubuntu-24.04
 
     steps:
@@ -176,14 +176,14 @@ jobs:
       # ================================================
       # BUILD SEARCHGLASS
       # ================================================
-      - name: Build SearchGlass
+      - name: Build 26Touch
         env:
           THEOS: /home/runner/theos
         run: |
           set -e
 
           echo "================================"
-          echo "Building SearchGlass"
+          echo "Building 26Touch"
           echo "================================"
 
           make clean
@@ -212,10 +212,10 @@ jobs:
       # ================================================
       # UPLOAD DEB
       # ================================================
-      - name: Upload SearchGlass.deb
+      - name: Upload 26Touch.deb
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: SearchGlass
+          name: 26Touch
           path: packages/*.deb
           if-no-files-found: error
